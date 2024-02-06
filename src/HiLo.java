@@ -10,7 +10,15 @@ public class HiLo {
         while (guess != theNumber) {
             System.out.println("Guess a number between 1 and 100: ");
             guess = scan.nextInt();
-            System.out.println("You entered " + guess + ".");
+            if (guess < theNumber) {
+                System.out.println(guess + " is too low. Try again.");
+            } 
+            else if (guess > theNumber) {
+                System.out.println(guess + " is too high. Try again.");
+            }
+            else {
+                System.out.println(guess + " is correct. You win!");
+            }
         }
     }
 }
