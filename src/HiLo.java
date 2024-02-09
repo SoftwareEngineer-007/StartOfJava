@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class HiLo {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in); // create Scanner
         String playAgain = "";
+        int numberOfTries = 0; // counting the number of attempts
         do {
             // Create a random number for the user to guess
             int theNumber = (int)(Math.random() * 100 + 1);
@@ -25,6 +26,7 @@ public class HiLo {
             System.out.println("Would you like to play again (y/n)?");
             playAgain = scan.next();
         } while (playAgain.equalsIgnoreCase("y"));
+        System.out.println("It only took you " + numberOfTries + " tries! Good work!");
         System.out.println("Thank you for playing! Goodbye.");
         scan.close();
     } //end main
